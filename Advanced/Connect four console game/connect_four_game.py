@@ -1,3 +1,5 @@
+from ascii_art import connect_four_logo
+
 class InvalidColumnError(Exception):
     pass
 
@@ -126,9 +128,8 @@ cols = 7
 # create matrix:
 matrix = [[0 for col in range(cols)] for row in range(rows)]
 
-print_matrix(matrix)
 player_num = 1
-
+print(connect_four_logo)
 while True:
     player_num = 2 if player_num % 2 == 0 else 1
     try:
