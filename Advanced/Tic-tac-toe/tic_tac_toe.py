@@ -1,3 +1,6 @@
+from ascii_art import tic_tac_toe_logo
+
+
 class Player():
     def __init__(self, name, sign):
         self.name = name
@@ -75,6 +78,7 @@ def is_draw(board):
     return all([board[x][y] is not None for x in range(len(board)) for y in range(len(board))])
 
 
+print(tic_tac_toe_logo)
 first_player, second_player = read_players()
 print_board_numeration()
 print(f"{first_player.name} starts first!")
