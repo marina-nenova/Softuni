@@ -94,10 +94,6 @@ board_mapper = {
 
 turn = 1
 
-
-
-
-
 while True:
     current_player = first_player if turn % 2 != 0 else second_player
     try:
