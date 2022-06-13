@@ -1,4 +1,5 @@
 import tkinter as tk
+from auth_service import register, login
 
 
 def clear_window(window):
@@ -12,7 +13,7 @@ def render_main_screen(window):
         text="Login",
         bg="green",
         fg="white",
-        command=""
+        command=lambda: render_login_screen(window)
     ).grid(row=0, column=0)
     tk.Button(
         window,
@@ -21,6 +22,39 @@ def render_main_screen(window):
         fg="black",
         command= lambda: render_register_screen(window)
     ).grid(row=0, column=1)
+
+
+def render_login_screen(window):
+    clear_window(window)
+
+    tk.Label(window, text="Enter username: ").grid(row=0, column=0)
+    username = tk.Entry(window)
+    username.grid(row=0, column=1)
+
+    tk.Label(window, text="Enter password: ").grid(row=1, column=0)
+    password = tk.Entry(window, show="*")
+    password.grid(row=1, column=1)
+
+    def on_login():
+        username_value = username.get()
+        password_value = password.get()
+
+        result = login(username_value, password_value)
+
+        if result:
+            pass
+        else:
+            tk.Label(window, text="Invalid username or password.", fg="red").grid(row=2, column=1)
+
+
+    tk.Button(
+        window,
+        text="Login",
+        bg="green",
+        fg="black",
+        command= on_login
+    ).grid(row=3, column=1)
+
 
 
 def render_register_screen(window):
@@ -49,6 +83,13 @@ def render_register_screen(window):
 
         if password_value != confirmed_password_value:
             tk.Label(window, text="password must match", fg="red").grid(row=4, column=1)
+        else:
+            result = register(username_value, email_value, password_value)
+            if result:
+                render_login_screen(window)
+            else:
+                tk.Label(window, text="Username is already taken.", fg="red").grid(row=4, column=1)
+
 
 
     tk.Button(
