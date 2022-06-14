@@ -1,2 +1,5 @@
 {"username": "foolingmyself", "email": "marina@abv.bg", "password": "8912241439"}
 {"username": "ivalina", "email": "ivalina@abv.bg", "password": "12345"}
+{"username": "fooling_myself", "email": "mamam", "password": "123"}
+{"username": "Marina", "email": "marina@abv.bg", "password": "123"}
+{"username": "pesho", "email": "pesho@abv.bg", "password": "1234"}

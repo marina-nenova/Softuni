@@ -1,5 +1,7 @@
 import tkinter as tk
 from auth_service import register, login
+from products_service import get_all_products
+from PIL import Image, ImageTk
 
 
 def clear_window(window):
@@ -9,6 +11,27 @@ def clear_window(window):
 
 def render_products_screen(window):
     clear_window(window)
+    products = get_all_products()
+    column = 0
+    row = 0
+    for product in products:
+        if column == 3:
+            row += 5
+            column = 0
+        tk.Label(window, text=product["name"]).grid(row=row, column=column)
+
+        img = Image.open(f"./db/images/{product['img']}").resize((100, 100))
+        photo_image = ImageTk.PhotoImage(img)
+        image_label = tk.Label(image=photo_image)
+        image_label.image = photo_image
+        image_label.grid(row=row + 1, column=column)
+
+        tk.Label(window, text=f"Price: {product['price']}").grid(row=row + 2, column=column)
+        tk.Label(window, text=f"Quantity: {product['count']}").grid(row=row + 3, column=column)
+        tk.Button(window, text="Buy").grid(row=row + 4, column=column)
+        column += 1
+
+
 
 
 def render_main_screen(window):
