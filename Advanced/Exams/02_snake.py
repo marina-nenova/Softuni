@@ -2,67 +2,62 @@ def valid_coordinates(row_index, col_index, size):
     return 0 <= row_index < size and 0 <= col_index < size
 
 
-def next_position(row_index, col_index, current_direction):
-    if current_direction == "up":
-        row_index -= 1
-    elif current_direction == "down":
-        row_index += 1
-    elif current_direction == "left":
-        col_index -= 1
-    elif current_direction == "right":
-        col_index += 1
-    return row_index, col_index
+directions = {
+    'right': lambda r, c: (r, c + 1),
+    'left': lambda r, c: (r, c - 1),
+    'down': lambda r, c: (r + 1, c),
+    'up': lambda r, c: (r - 1, c)
+}
 
 
 size = int(input())
 
-territory = [list(input()) for _ in range(size)]
+field = [list(input()) for _ in range(size)]
+
 snake_row = 0
 snake_col = 0
 burrows = []
-
 for row in range(size):
     for col in range(size):
-        if territory[row][col] == "S":
+        if field[row][col] == "S":
             snake_row, snake_col = row, col
-        elif territory[row][col] == "B":
+        elif field[row][col] == "B":
             burrows.append((row, col))
 
-game_over = False
-food_eaten = 0
+food_quantity = 0
+success = False
 
 while True:
     direction = input()
-    next_row, next_col = next_position(snake_row, snake_col, direction)
+    next_row, next_col = directions[direction](snake_row, snake_col)
 
-    territory[snake_row][snake_col] = "."
+    field[snake_row][snake_col] = "."
     snake_row, snake_col = next_row, next_col
 
     if not valid_coordinates(snake_row, snake_col, size):
-        game_over = True
         break
 
-    if territory[next_row][next_col] == "*":
-        food_eaten += 1
-
-    elif territory[snake_row][snake_col] == "B":
+    if (snake_row, snake_col) in burrows:
         burrows.remove((snake_row, snake_col))
-        territory[snake_row][snake_col] = "."
-        exit_row, exit_col = burrows[0][0], burrows[0][1]
-        snake_row, snake_col = exit_row, exit_col
+        field[snake_row][snake_col] = "."
+        snake_row, snake_col = burrows.pop()
 
-    territory[snake_row][snake_col] = "S"
+    elif field[snake_row][snake_col] == "*":
+        food_quantity += 1
+        if food_quantity == 10:
+            success = True
+            field[snake_row][snake_col] = "S"
+            break
 
-    if food_eaten == 10:
-        break
+    field[snake_row][snake_col] = "S"
 
-
-if game_over:
-    print("Game over!")
-else:
+if success:
     print("You won! You fed the snake.")
+else:
+    print("Game over!")
 
-print(f"Food eaten: {food_eaten}")
+print(f"Food eaten: {food_quantity}")
 
-for row in territory:
+for row in field:
     print(*row, sep="")
+

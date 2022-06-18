@@ -2,8 +2,8 @@ def valid_coordinates(row_index, col_index):
     return 0 <= row_index < size and 0 <= col_index < size
 
 
-def next_position(row, col, direction):
-    queen_new_positions = []
+def queen_search(row, col, direction):
+    queen_position = []
 
     while True:
         if direction == "up left":
@@ -22,41 +22,38 @@ def next_position(row, col, direction):
             row, col = row + 1, col + 1
         elif direction == "down left":
             row, col = row, col - 1
-
-        if not valid_coordinates(row, col) or chess_board[row][col] == "Q":
+        if not valid_coordinates(row, col):
             break
-        else:
-            queen_new_positions.append((row, col))
-    return queen_new_positions
+        elif chess_board[row][col] == "Q":
+            queen_position = [row, col]
+            break
+
+    return queen_position
 
 
 size = 8
 
 chess_board = [input().split() for _ in range(size)]
 
-queen_positions = []
-king_position = ()
+queen_position = []
+king_row = 0
+king_col = 0
 
 for row in range(size):
     for col in range(size):
-        if chess_board[row][col] == "Q":
-            queen_positions.append((row, col))
-        elif chess_board[row][col] == "K":
-            king_position = (row, col)
+        if chess_board[row][col] == "K":
+            king_row, king_col = row, col
 
 possible_moves = ["up left", "up", "up right", "right", "left", "down", "down right", "down left"]
 successful_queens = []
 
-for queen_row, queen_col in queen_positions:
-    for direction in possible_moves:
-        next_coordinates = next_position(queen_row, queen_col, direction)
-        if king_position in next_coordinates:
-            successful_queens.append([queen_row, queen_col])
-            break
+for direction in possible_moves:
+    queen_position = queen_search(king_row, king_col, direction)
+    if queen_position:
+        successful_queens.append(queen_position)
 
 if successful_queens:
-    for queen in successful_queens:
-        print(queen)
+    print(*successful_queens, sep="\n")
 
 else:
     print("The king is safe!")

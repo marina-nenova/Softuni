@@ -1,17 +1,18 @@
 def numbers_searching(*args):
-    output = []
+    min_num = min(args)
+    max_num = max(args)
 
-    lowest = min(args)
-    highest = max(args)
-    for num in range(lowest, highest + 1):
+    result = []
+    duplicates = []
+    for num in range(min_num, max_num + 1):
         if num not in args:
-            output.append(num)
+            result.append(num)
+        if args.count(num) > 1:
+            duplicates.append(num)
 
-    duplicates = set(num for num in args if args.count(num) > 1)
-    output.append(list(sorted(duplicates)))
+    result.append(duplicates)
 
-    return output
-
+    return result
 
 
 print(numbers_searching(1, 2, 4, 2, 5, 4))

@@ -29,12 +29,12 @@ while elves and materials:
     energy_used += needed_energy
     current_elf -= needed_energy
 
-    if count % 3 == 0:
-        if count % 5 == 0:
-            elves.append(current_elf)
-        else:
-            elves.append(current_elf + 1)
-            crafted_toys += 2
+    if count % 3 == 0 and count % 5 == 0:
+        elves.append(current_elf)
+
+    elif count % 3 == 0:
+        elves.append(current_elf + 1)
+        crafted_toys += 2
 
     elif count % 5 == 0:
         elves.append(current_elf)
@@ -52,3 +52,5 @@ if elves:
 
 if materials:
     print(f"Boxes left: {', '.join([str(el) for el in materials])}")
+
+

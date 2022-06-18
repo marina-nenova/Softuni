@@ -46,3 +46,49 @@ if magic:
 
 for present, count in sorted(crafted_presents.items()):
     print(f"{present}: {count}")
+
+
+# from collections import deque
+#
+# materials = [int(el) for el in input().split()]
+# magic = deque([int(el) for el in input().split()])
+#
+# gifts = {"Gemstone": range(100, 200), "Porcelain Sculpture": range(200, 300), "Gold": range(300, 400), "Diamond Jewellery": range(400, 500)}
+# gifts_made = {}
+#
+# while magic and materials:
+#     current_material = materials.pop()
+#     current_magic = magic.popleft()
+#
+#     current_sum = current_magic + current_material
+#
+#     if current_sum < 100:
+#         if current_sum % 2 == 0:
+#             current_sum = current_material * 2 + current_magic * 3
+#         else:
+#             current_sum *= 2
+#
+#     elif current_sum >= 500:
+#         current_sum //= 2
+#
+#     for gift, range in gifts.items():
+#         if current_sum in range:
+#             current_gift = gift
+#             if current_gift not in gifts_made:
+#                 gifts_made[current_gift] = 0
+#             gifts_made[current_gift] += 1
+#             break
+#
+# if ("Gemstone" in gifts_made and "Porcelain Sculpture" in gifts_made) or ("Gold" in gifts_made and "Diamond Jewellery" in gifts_made):
+#     print("The wedding presents are made!")
+# else:
+#     print("Aladdin does not have enough wedding presents.")
+#
+# if materials:
+#     print(f"Materials left: {', '.join([str(el) for el in materials])}")
+#
+# if magic:
+#     print(f"Magic left: {', '.join([str(el) for el in magic])}")
+#
+# for gift, amount in sorted(gifts_made.items()):
+#     print(f"{gift}: {amount}")

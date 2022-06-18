@@ -1,6 +1,3 @@
-import math
-
-
 def valid_coordinates(row_index, col_index, size):
     return 0 <= row_index < size and 0 <= col_index < size
 
@@ -66,7 +63,7 @@ while True:
         break
 
 if failed:
-    print(f"Game over! You've collected {math.floor(total_coins / 2)} coins.")
+    print(f"Game over! You've collected {total_coins // 2} coins.")
 else:
     print(f"You won! You've collected {total_coins} coins.")
 

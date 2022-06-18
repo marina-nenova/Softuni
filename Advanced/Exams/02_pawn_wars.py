@@ -42,7 +42,7 @@ promoted = False
 captured = False
 
 while True:
-    player_row, player_col = players_coordinates[current_player][0], players_coordinates[current_player][1]
+    player_row, player_col = players_coordinates[current_player]
 
     captured = attack(player_row, player_col, current_player)
 
@@ -72,9 +72,9 @@ while True:
 
 
 if promoted:
-    promotion_row, promotion_col = players_coordinates[current_player][0], players_coordinates[current_player][1]
+    promotion_row, promotion_col = players_coordinates[current_player]
     print(f"Game over! {current_player} pawn is promoted to a queen at {board[promotion_row][promotion_col]}.")
 
 elif captured:
-    capture_row, capture_col = players_coordinates[next_player][0], players_coordinates[next_player][1]
+    capture_row, capture_col = players_coordinates[next_player]
     print(f"Game over! {current_player} win, capture on {board[capture_row][capture_col]}.")

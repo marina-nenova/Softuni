@@ -1,82 +1,82 @@
-def valid_coordinates(row_index, col_index, rows, cols):
-    return 0 <= row_index < rows and 0 <= col_index < cols
+def valid_coordinates(row_index, col_index, size):
+    return 0 <= row_index < size and 0 <= col_index < size
 
 
 def next_position(row_index, col_index, current_direction, steps):
     steps_made = []
+
     for step in range(steps):
+
         if current_direction == "up":
-            row_index -= 1
-            if row_index < 0:
-                row_index = rows - 1
+            row_index = rows - 1 if row_index == 0 else row_index - 1
         elif current_direction == "down":
-            row_index += 1
-            if row_index >= rows:
-                row_index = 0
+            row_index = 0 if row_index == rows - 1 else row_index + 1
         elif current_direction == "left":
-            col_index -= 1
-            if col_index < 0:
-                col_index = cols - 1
+            col_index = cols - 1 if col_index == 0 else col_index - 1
         elif current_direction == "right":
-            col_index += 1
-            if col_index >= cols:
-                col_index = 0
+            col_index = 0 if col_index == cols - 1 else col_index + 1
+
         steps_made.append((row_index, col_index))
+
     return steps_made
 
 
 rows, cols = [int(el) for el in input().split(", ")]
 
-workshop = [input().split() for _ in range(rows)]
+field = []
 
 player_row = 0
 player_col = 0
-items = []
+items = 0
 
 for row in range(rows):
+    line = input().split()
     for col in range(cols):
-        if workshop[row][col] == "Y":
+        if line[col] == "Y":
             player_row, player_col = row, col
-        elif workshop[row][col] in "D G C":
-            items.append((row, col))
+        elif line[col] in "G D C":
+            items += 1
+    field.append(line)
 
-collected_items = {"Christmas decorations": 0, "Gifts": 0, "Cookies": 0}
+items_collected = {"Christmas decorations": 0, "Gifts": 0, "Cookies": 0}
 command = input()
 
 while not command == "End":
     data = command.split("-")
     direction = data[0]
     steps = int(data[1])
-    next_steps = next_position(player_row, player_col, direction, steps)
+    field[player_row][player_col] = "x"
+    next_positions = next_position(player_row, player_col, direction, steps)
 
-    for next_row, next_col in next_steps:
+    for row, col in next_positions:
+        field[player_row][player_col] = "x"
+        player_row, player_col = row, col
+
+        if field[player_row][player_col] == "D":
+            items_collected["Christmas decorations"] += 1
+            items -= 1
+        elif field[player_row][player_col] == "G":
+            items_collected["Gifts"] += 1
+            items -= 1
+        elif field[player_row][player_col] == "C":
+            items_collected["Cookies"] += 1
+            items -= 1
+
+        field[player_row][player_col] = "Y"
+
         if not items:
             break
-        workshop[player_row][player_col] = "x"
-        player_row, player_col = next_row, next_col
-        if workshop[player_row][player_col] == "D":
-            collected_items["Christmas decorations"] += 1
-            items.remove((player_row, player_col))
-        elif workshop[player_row][player_col] == "G":
-            collected_items["Gifts"] += 1
-            items.remove((player_row, player_col))
-        elif workshop[player_row][player_col] == "C":
-            collected_items["Cookies"] += 1
-            items.remove((player_row, player_col))
-        workshop[player_row][player_col] = "Y"
 
     if not items:
+        print("Merry Christmas!")
         break
 
     command = input()
 
-if not items:
-    print("Merry Christmas!")
-
 print("You've collected:")
 
-for item, count in collected_items.items():
+for item, count in items_collected.items():
     print(f"- {count} {item}")
 
-for row in workshop:
-    print(*row, sep=" ")
+for row in field:
+    print(*row, end="\n")

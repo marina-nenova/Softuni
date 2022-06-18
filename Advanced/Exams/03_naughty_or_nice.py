@@ -9,7 +9,7 @@ def naughty_or_nice_list(names_list,*args, **kwargs):
         data = el.split("-")
         number = int(data[0])
         kid_type = data[1]
-        if num_counter[int(number)] == 1:
+        if num_counter[number] == 1:
             name = [name for num, name in names_list if num == number]
             santa_list[kid_type].extend(name)
             names_list = [el for el in names_list if el[0] != number]
@@ -31,14 +31,6 @@ def naughty_or_nice_list(names_list,*args, **kwargs):
             output += f"{type}: {', '.join(kids)}\n"
 
     return output
-
-
-
-
-
-
-
-
 
 
 

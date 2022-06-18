@@ -6,6 +6,7 @@ bomb_casings = [int(el) for el in input().split(", ")]
 bombs = {40: "Datura Bombs", 60: "Cherry Bombs", 120: "Smoke Decoy Bombs"}
 bombs_created = {"Datura Bombs": 0, "Cherry Bombs": 0, "Smoke Decoy Bombs": 0}
 filled_pouch = False
+
 while bomb_effects and bomb_casings:
     current_bomb_effect = bomb_effects.popleft()
     current_bomb_casing = bomb_casings.pop()
