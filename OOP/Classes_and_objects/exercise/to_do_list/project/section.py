@@ -2,7 +2,7 @@ from Classes_and_objects.exercise.to_do_list.project.task import Task
 
 
 class Section:
-    def __init__(self, name:str):
+    def __init__(self, name: str):
         self.name = name
         self.tasks = []
 

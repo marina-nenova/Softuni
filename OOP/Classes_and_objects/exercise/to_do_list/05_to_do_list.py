@@ -13,4 +13,3 @@ second_task = Task("Make bed", "27/05/2020")
 section.add_task(second_task)
 print(section.clean_section())
 print(section.view_section())
-
