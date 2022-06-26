@@ -4,7 +4,7 @@ from Classes_and_objects.exercise.spoopify.project.song import Song
 class Album:
     def __init__(self, name, *args):
         self.name = name
-        self.songs = [*args]
+        self.songs = list(args)
         self.published = False
 
     def add_song(self, song: Song):
@@ -27,10 +27,10 @@ class Album:
         return "Song is not in the album."
 
     def publish(self):
-        if not self.published:
-            self.published = True
-            return f"Album {self.name} has been published."
-        return f"Album {self.name} is already published."
+        if self.published:
+            return f"Album {self.name} is already published."
+        self.published = True
+        return f"Album {self.name} has been published."
 
     def details(self):
         output = f"Album {self.name}\n"
