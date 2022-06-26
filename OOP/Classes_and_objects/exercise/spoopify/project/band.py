@@ -1,4 +1,4 @@
-from Classes_and_objects.exercise.spoopify.project.album import Album
+from project.album import Album
 
 
 class Band:

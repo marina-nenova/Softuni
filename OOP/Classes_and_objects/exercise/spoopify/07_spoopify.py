@@ -1,6 +1,6 @@
-from Classes_and_objects.exercise.spoopify.project.album import Album
-from Classes_and_objects.exercise.spoopify.project.band import Band
-from Classes_and_objects.exercise.spoopify.project.song import Song
+from project.album import Album
+from project.band import Band
+from project.song import Song
 
 song = Song("Running in the 90s", 3.45, False)
 print(song.get_info())

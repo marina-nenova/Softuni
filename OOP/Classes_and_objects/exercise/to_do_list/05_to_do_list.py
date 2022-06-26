@@ -1,5 +1,5 @@
-from Classes_and_objects.exercise.to_do_list.project.section import Section
-from Classes_and_objects.exercise.to_do_list.project.task import Task
+from project.section import Section
+from project.task import Task
 
 task = Task("Make bed", "27/05/2020")
 print(task.change_name("Go to University"))

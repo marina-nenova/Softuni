@@ -1,5 +1,5 @@
-from Classes_and_objects.exercise.library.project.library import Library
-from Classes_and_objects.exercise.library.project.user import User
+from project.library import Library
+from project.user import User
 
 
 class Registration:
