@@ -1,10 +1,11 @@
 class Player:
+    DEFAULT_GUILD = "Unaffiliated"
     def __init__(self, name: str, hp: int, mp: int):
         self.name = name
         self.hp = hp
         self.mp = mp
         self.skills = {}
-        self.guild = "Unaffiliated"
+        self.guild = Player.DEFAULT_GUILD
 
     def add_skill(self, skill_name: str, mana_cost: int):
         if skill_name not in self.skills:
