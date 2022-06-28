@@ -6,8 +6,7 @@ class ProductRepository:
         self.products = []
 
     def add(self, product: Product):
-        if product not in self.products:
-            self.products.append(product)
+        self.products.append(product)
 
     def find(self, product_name: str):
         for product in self.products:
@@ -15,9 +14,9 @@ class ProductRepository:
                 return product
 
     def remove(self, product_name: str):
-        for product in self.products:
-            if product.name == product_name:
-                self.products.remove(product)
+        product = self.find(product_name)
+        if product is not None:
+            self.products.remove(product)
 
     def __repr__(self):
         output = []
