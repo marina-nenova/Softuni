@@ -75,7 +75,6 @@ class Zoo:
 
         return output.strip()
 
-
     def workers_status(self):
         workers_dict = {"Keepers": [], "Caretakers": [], "Vets": []}
 
