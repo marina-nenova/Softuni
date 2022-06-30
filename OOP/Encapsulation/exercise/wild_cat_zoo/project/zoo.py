@@ -1,7 +1,3 @@
-from project.animal import Animal
-from project.worker import Worker
-
-
 class Zoo:
     def __init__(self, name, budget, animal_capacity, workers_capacity):
         self.name = name
