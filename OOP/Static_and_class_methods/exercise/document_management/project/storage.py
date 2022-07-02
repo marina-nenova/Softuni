@@ -22,35 +22,35 @@ class Storage:
             self.documents.append(document)
 
     @staticmethod
-    def get_instance(id, collection):
+    def __get_instance_by_id(id, collection):
         return [x for x in collection if x.id == id][0]
 
     def edit_category(self, category_id: int, new_name: str):
-        category = Storage.get_instance(category_id, self.categories)
-        return category.edit(new_name)
+        category = Storage.__get_instance_by_id(category_id, self.categories)
+        category.edit(new_name)
 
     def edit_topic(self, topic_id: int, new_topic: str, new_storage_folder: str):
-        topic = Storage.get_instance(topic_id, self.topics)
-        return topic.edit(new_topic, new_storage_folder)
+        topic = Storage.__get_instance_by_id(topic_id, self.topics)
+        topic.edit(new_topic, new_storage_folder)
 
     def edit_document(self, document_id: int, new_file_name: str):
-        document = Storage.get_instance(document_id, self.documents)
-        return document.edit(new_file_name)
+        document = Storage.__get_instance_by_id(document_id, self.documents)
+        document.edit(new_file_name)
 
     def delete_category(self, category_id):
-        category = Storage.get_instance(category_id, self.categories)
+        category = Storage.__get_instance_by_id(category_id, self.categories)
         self.categories.remove(category)
 
     def delete_topic(self, topic_id):
-        topic = Storage.get_instance(topic_id, self.topics)
+        topic = Storage.__get_instance_by_id(topic_id, self.topics)
         self.topics.remove(topic)
 
     def delete_document(self, document_id):
-        document = Storage.get_instance(document_id, self.documents)
+        document = Storage.__get_instance_by_id(document_id, self.documents)
         self.documents.remove(document)
 
     def get_document(self, document_id):
-        document = Storage.get_instance(document_id, self.documents)
+        document = Storage.__get_instance_by_id(document_id, self.documents)
         return repr(document)
 
     def __repr__(self):
