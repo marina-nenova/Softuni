@@ -14,35 +14,34 @@ class Gym:
         self.subscriptions = []
 
     def add_customer(self, customer: Customer):
-        if customer not in self.customers:
-            self.customers.append(customer)
+        self.__add_entity(customer, self.customers)
 
     def add_trainer(self, trainer: Trainer):
-        if trainer not in self.trainers:
-            self.trainers.append(trainer)
+        self.__add_entity(trainer, self.trainers)
 
     def add_equipment(self, equipment: Equipment):
-        if equipment not in self.equipment:
-            self.equipment.append(equipment)
+        self.__add_entity(equipment, self.equipment)
 
     def add_plan(self, plan: ExercisePlan):
-        if plan not in self.plans:
-            self.plans.append(plan)
+        self.__add_entity(plan, self.plans)
 
     def add_subscription(self, subscription: Subscription):
-        if subscription not in self.subscriptions:
-            self.subscriptions.append(subscription)
+        self.__add_entity(subscription, self.subscriptions)
+
+    def __add_entity(self, entity, collection):
+        if entity not in collection:
+            collection.append(entity)
 
     @staticmethod
-    def __get_instance(id, collection):
+    def __get_instance_by_id(id, collection):
         return [x for x in collection if x.id == id][0]
 
     def subscription_info(self, subscription_id: int):
-        subscription = Gym.__get_instance(subscription_id, self.subscriptions)
-        customer = Gym.__get_instance(subscription.customer_id, self.customers)
-        trainer = Gym.__get_instance(subscription.trainer_id, self.trainers)
-        plan = Gym.__get_instance(subscription.exercise_id, self.plans)
-        equipment = Gym.__get_instance(plan.equipment_id, self.equipment)
+        subscription = Gym.__get_instance_by_id(subscription_id, self.subscriptions)
+        customer = Gym.__get_instance_by_id(subscription.customer_id, self.customers)
+        trainer = Gym.__get_instance_by_id(subscription.trainer_id, self.trainers)
+        plan = Gym.__get_instance_by_id(subscription.exercise_id, self.plans)
+        equipment = Gym.__get_instance_by_id(plan.equipment_id, self.equipment)
 
         info = [subscription, customer, trainer, equipment, plan]
         return "\n".join([repr(x) for x in info])
