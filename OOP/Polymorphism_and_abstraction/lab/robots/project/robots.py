@@ -9,31 +9,24 @@ class Robot:
 
 class MedicalRobot(Robot):
     @staticmethod
-    def medical_robot_sensors_amount():
+    def sensors_amount():
         return 6
 
 
 class ChefRobot(Robot):
     @staticmethod
-    def chef_robot_sensors_amount():
+    def sensors_amount():
         return 4
 
 
 class WarRobot(Robot):
     @staticmethod
-    def war_robot_sensors_amount():
+    def sensors_amount():
         return 12
 
 
 def number_of_robot_sensors(robot):
-    if isinstance(robot, Robot):
-        print(robot.sensors_amount())
-    if isinstance(robot, MedicalRobot):
-        print(robot.medical_robot_sensors_amount())
-    elif isinstance(robot, ChefRobot):
-        print(robot.chef_robot_sensors_amount())
-    elif isinstance(robot, WarRobot):
-        print(robot.war_robot_sensors_amount())
+    print(robot.sensors_amount())
 
 
 basic_robot = Robot('Robo')
