@@ -1,18 +1,20 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 import time
 
-class AbstractWorker:
-    __metaclass__ = ABCMeta
 
+class Workable(ABC):
     @abstractmethod
     def work(self):
         pass
 
+
+class Eatable(ABC):
     @abstractmethod
     def eat(self):
         pass
 
-class Worker(AbstractWorker):
+
+class Worker(Workable, Eatable):
 
     def work(self):
         print("I'm normal worker. I'm working.")
@@ -21,7 +23,8 @@ class Worker(AbstractWorker):
         print("Lunch break....(5 secs)")
         time.sleep(5)
 
-class SuperWorker(AbstractWorker):
+
+class SuperWorker(Workable, Eatable):
 
     def work(self):
         print("I'm super worker. I work very hard!")
@@ -31,40 +34,56 @@ class SuperWorker(AbstractWorker):
         time.sleep(3)
 
 
-class Manager:
+class Robot(Workable):
+
+    def work(self):
+        print("I'm a robot. I'm working....")
+
+
+class WorkManager:
 
     def __init__(self):
         self.worker = None
 
     def set_worker(self, worker):
-        assert isinstance(worker, AbstractWorker), "`worker` must be of type {}".format(AbstractWorker)
+        assert isinstance(worker, Workable), "`worker` must be of type {}".format(Workable)
 
         self.worker = worker
 
     def manage(self):
         self.worker.work()
 
+
+class BreakManager:
+    def __init__(self):
+        self.worker = None
+
+    def set_worker(self, worker):
+        assert isinstance(worker, Eatable), "`worker` must be of type {}".format(Workable)
+
+        self.worker = worker
+
     def lunch_break(self):
         self.worker.eat()
 
-class Robot(AbstractWorker):
 
-    def work(self):
-        print("I'm a robot. I'm working....")
+work_manager = WorkManager()
+break_manager = BreakManager()
+worker = Worker()
 
-    def eat(self):
-        print("I don't need to eat....")
+work_manager.set_worker(Worker())
+break_manager.set_worker(Worker())
 
+work_manager.manage()
+break_manager.lunch_break()
 
-manager = Manager()
-manager.set_worker(Worker())
-manager.manage()
-manager.lunch_break()
+super_worker = SuperWorker()
+work_manager.set_worker(super_worker)
+break_manager.set_worker(super_worker)
+work_manager.manage()
+break_manager.lunch_break()
 
-manager.set_worker(SuperWorker())
-manager.manage()
-manager.lunch_break()
-
-manager.set_worker(Robot())
-manager.manage()
-manager.lunch_break()
+robot_worker = Robot()
+work_manager.set_worker(robot_worker)
+break_manager.set_worker(robot_worker)
+work_manager.manage()
