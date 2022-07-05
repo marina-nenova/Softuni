@@ -1,13 +1,25 @@
 from abc import abstractmethod, ABC
 
 
-class Duck(ABC):
+class Duck(ABC, ):
     @staticmethod
     def quack():
         pass
 
 
-class RubberDuck(Duck):
+class Flyable:
+    @staticmethod
+    def fly(self):
+        pass
+
+
+class Walkable:
+    @staticmethod
+    def walk():
+        pass
+
+
+class RubberDuck(Duck, Flyable, Walkable):
     @staticmethod
     def quack():
         return "Squeek"
