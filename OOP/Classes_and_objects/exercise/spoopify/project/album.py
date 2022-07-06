@@ -12,7 +12,7 @@ class Album:
             return "Cannot add songs. Album is published."
         elif song.single:
             return f"Cannot add {song.name}. It's a single"
-        elif any([song.name == existing_song.name for existing_song in self.songs]):
+        elif song in self.songs:
             return "Song is already in the album."
         self.songs.append(song)
         return f"Song {song.name} has been added to the album {self.name}."

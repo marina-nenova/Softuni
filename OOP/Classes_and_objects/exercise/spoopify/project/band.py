@@ -7,7 +7,7 @@ class Band:
         self.albums = []
 
     def add_album(self, album: Album):
-        if any([existing_album.name == album.name for existing_album in self.albums]):
+        if album in self.albums:
             return f"Band {self.name} already has {album.name} in their library."
         self.albums.append(album)
         return f"Band {self.name} has added their newest album {album.name}."
