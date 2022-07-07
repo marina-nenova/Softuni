@@ -48,6 +48,7 @@ Here you can find problem solutions from the following lectures:
 6. [**Static and class methods**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Static_and_class_methods)
 7. [**SOLID principles**](https://github.com/marina-nenova/Softuni/tree/main/OOP/SOLID)
 8. [**Iterators and generators**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Iterators_and_generators)
+9. [**Decorators**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Decorators)
 ***
 **Exams Practice**
 
