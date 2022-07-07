@@ -4,13 +4,17 @@ def type_check(t):
             if isinstance(*args, t):
                 return func(*args)
             return "Bad Type"
+
         return wrapper
+
     return decorator
 
 
 @type_check(int)
 def times2(num):
-    return num*2
+    return num * 2
+
+
 print(times2(2))
 print(times2('Not A Number'))
 
@@ -19,6 +23,6 @@ print(times2('Not A Number'))
 def first_letter(word):
     return word[0]
 
+
 print(first_letter('Hello World'))
 print(first_letter(['Not', 'A', 'String']))
-
