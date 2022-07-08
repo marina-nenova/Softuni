@@ -49,6 +49,7 @@ Here you can find problem solutions from the following lectures:
 7. [**SOLID principles**](https://github.com/marina-nenova/Softuni/tree/main/OOP/SOLID)
 8. [**Iterators and generators**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Iterators_and_generators)
 9. [**Decorators**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Decorators)
+10. [**Unit testing**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Unit_testing/lab)
 ***
 **Exams Practice**
 
