@@ -75,3 +75,10 @@ class Car:
 car = Car("a", "b", 1, 4)
 car.make = ""
 print(car)
+
+
+from unittest import TestCase, main
+
+
+if __name__ == "__main__":
+    main()
