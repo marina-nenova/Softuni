@@ -4,36 +4,25 @@ from project.mammal import Mammal
 
 
 class MammalTests(TestCase):
-    def test_mammal_name_is_initialized_correctly(self):
-        dog = Mammal("Loki", "Dog", "Woof!")
-        self.assertEqual("Loki", dog.name)
+    def setUp(self) -> None:
+        self.mammal = Mammal("Loki", "Dog", "Woof!")
 
-    def test_mammal_type_is_initialized_correctly(self):
-        dog = Mammal("Loki", "Dog", "Woof!")
-        self.assertEqual("Dog", dog.type)
-
-    def test_mammal_sound_is_initialized_correctly(self):
-        dog = Mammal("Loki", "Dog", "Woof!")
-        self.assertEqual("Woof!", dog.sound)
-
-    def test_mammal_kingdom_initialised_correctly(self):
-        def test_mammal_sound_is_initialized_correctly(self):
-            dog = Mammal("Loki", "Dog", "Woof!")
-            self.assertEqual("animals!", dog._Mammal__kingdom)
+    def test_mammal_init(self):
+        self.assertEqual("Loki", self.mammal.name)
+        self.assertEqual("Dog", self.mammal.type)
+        self.assertEqual("Woof!", self.mammal.sound)
+        self.assertEqual("animals", self.mammal._Mammal__kingdom)
 
     def test_mammal_make_sound_returns_string(self):
-        dog = Mammal("Loki", "Dog", "Woof!")
-        result = dog.make_sound()
-        self.assertEqual("Loki makes Woof!", result)
+        result = self.mammal.make_sound()
+        self.assertEqual(f"{self.mammal.name} makes {self.mammal.sound}", result)
 
     def test_get_kingdom(self):
-        dog = Mammal("Loki", "Dog", "Woof!")
-        self.assertEqual("animals", dog.get_kingdom())
+        self.assertEqual("animals", self.mammal.get_kingdom())
 
     def test_info_method_returns_correct_string(self):
-        dog = Mammal("Loki", "Dog", "Woof!")
-        result = dog.info()
-        self.assertEqual("Loki is of type Dog", result)
+        result = self.mammal.info()
+        self.assertEqual(f"{self.mammal.name} is of type {self.mammal.type}", result)
 
 
 if __name__ == "__main__":
