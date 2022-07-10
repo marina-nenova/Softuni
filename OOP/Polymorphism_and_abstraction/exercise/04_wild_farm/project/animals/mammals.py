@@ -19,7 +19,6 @@ class Mouse(Mammal):
 class Dog(Mammal):
     def __init__(self, name, weight, living_region):
         super().__init__(name, weight, living_region)
-        self.sound = "Woof!"
 
     def make_sound(self):
         return "Woof!"
@@ -34,7 +33,6 @@ class Dog(Mammal):
 class Cat(Mammal):
     def __init__(self, name, weight, living_region):
         super().__init__(name, weight, living_region)
-        self.sound = "Meow"
 
     def make_sound(self):
         return "Meow"
