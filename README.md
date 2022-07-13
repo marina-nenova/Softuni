@@ -57,5 +57,5 @@ Here you can find problem solutions from the following lectures:
  2. [**Fundamentals-Mid exams**](https://github.com/marina-nenova/Softuni/tree/main/Fundamentals/Mid_exam)
  3. [**Fundamentals-Final exams**](https://github.com/marina-nenova/Softuni/tree/main/Fundamentals/Regular_exam)
  4. [**Advanced**](https://github.com/marina-nenova/Softuni/tree/main/Advanced/Exams)
- 5. [**OOP**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Exams/Movie_app/project)
+ 5. [**OOP**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Exams)
 
