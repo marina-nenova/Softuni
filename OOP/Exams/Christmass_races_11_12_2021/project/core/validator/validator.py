@@ -67,6 +67,6 @@ class Validator:
             raise Exception(message)
 
     @staticmethod
-    def raise_if__not_enough_drivers_in_race(race, min_drivers, message):
+    def raise_if_not_enough_drivers_in_race(race, min_drivers, message):
         if len(race.drivers) < min_drivers:
             raise Exception(message)

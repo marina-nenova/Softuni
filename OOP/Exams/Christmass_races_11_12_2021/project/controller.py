@@ -63,7 +63,7 @@ class Controller:
     def start_race(self, race_name: str):
         race = Validator.find_race_by_name(self.races, race_name, f"Race {race_name} could not be found!")
 
-        Validator.raise_if__not_enough_drivers_in_race(
+        Validator.raise_if_not_enough_drivers_in_race(
             race,
             3,
             f"Race {race_name} cannot start with less than 3 participants!"
