@@ -1,8 +1,8 @@
 from collections import deque
 
 from project.astronaut.astronaut_repository import AstronautRepository
-from project.core.factory.astronaut_factory import AstronautFactory
-from project.core.factory.planet_factory import PlanetFactory
+from project.core.factory.car_factory import AstronautFactory
+from project.core.factory.race_factory import PlanetFactory
 from project.core.validator.validator import Validator
 from project.planet.planet_repository import PlanetRepository
 
