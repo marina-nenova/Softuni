@@ -42,9 +42,9 @@ class System:
         software = System.find_instance_by_name(software_name, System._software)
         if hardware is None and software is None:
             return "Some of the components do not exist"
+
         hardware.uninstall(software)
-        if software in System._software:
-            System._software.remove(software)
+        System._software.remove(software)
 
     @staticmethod
     def find_instance_by_name(name, collection):
@@ -55,28 +55,36 @@ class System:
 
     @staticmethod
     def analyze():
-        return f"System Analysis\n" \
-               f"Hardware Components: {len(System._hardware)}\n" \
-               f"Software Components: {len(System._software)}\n" \
-               f"Total Operational Memory: {sum([el.memory_consumption for el in System._software])}" \
-               f" / {sum([el.memory for el in System._hardware])}\n" \
-               f"Total Capacity Taken: {sum([el.capacity_consumption for el in System._software])}" \
-               f" / {sum([el.capacity for el in System._hardware])}"
+        total_hardware_capacity = sum([hw.capacity for hw in System._hardware])
+        total_hardware_memory = sum([hw.memory for hw in System._hardware])
+        capacity_taken = sum([sw.capacity_consumption for sw in System._software])
+        memory_taken = sum([sw.memory_consumption for sw in System._software])
+
+        output = f"System Analysis\n" \
+                 f"Hardware Components: {len(System._hardware)}\n" \
+                 f"Software Components: {len(System._software)}\n" \
+                 f"Total Operational Memory: {memory_taken} / {total_hardware_memory}\n" \
+                 f"Total Capacity Taken: {capacity_taken} / {total_hardware_capacity}"
+        return output
 
     @staticmethod
     def system_split():
         output = ""
+
         for hardware in System._hardware:
-            express_software_components = [x for x in hardware.software_components if x.software_type == "Express"]
-            light_software_components = [x for x in hardware.software_components if x.software_type == "Light"]
-            software_components = "None" if not hardware.software_components else ', '.join([x.name for x in hardware.software_components])
+            express_software_installed = [sw for sw in hardware.software_components if sw.software_type == "Express"]
+            light_software_installed = [sw for sw in hardware.software_components if sw.software_type == "Light"]
+            memory_usage = sum([sw.memory_consumption for sw in hardware.software_components])
+            capacity_usage = sum([sw.capacity_consumption for sw in hardware.software_components])
+            software_components_names = [sw.name for sw in
+                                         hardware.software_components] if hardware.software_components else "None"
 
             output += f"Hardware Component - {hardware.name}\n"
-            output += f"Express Software Components: {len(express_software_components)}\n"
-            output += f"Light Software Components: {len(light_software_components)}\n"
-            output += f"Memory Usage: {sum([s.memory_consumption for s in hardware.software_components])} / {hardware.memory}\n"
-            output += f"Capacity Usage: {sum([s.capacity_consumption for s in hardware.software_components])} / {hardware.capacity}\n"
+            output += f"Express Software Components: {len(express_software_installed)}\n"
+            output += f"Light Software Components: {len(light_software_installed)}\n"
+            output += f"Memory Usage: {memory_usage} / {hardware.memory}\n"
+            output += f"Capacity Usage: {capacity_usage} / {hardware.capacity}\n"
             output += f"Type: {hardware.hardware_type}\n"
-            output += f"Software Components: {software_components}\n"
+            output += f"Software Components: {', '.join(software_components_names)}\n"
 
         return output.strip()
