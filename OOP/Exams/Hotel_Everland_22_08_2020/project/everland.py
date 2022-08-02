@@ -30,11 +30,13 @@ class Everland:
         total_population = sum([room.members_count for room in self.rooms])
         output = f"Total population: {total_population}\n"
         for room in self.rooms:
-            output += f"{room.family_name} with {room.members_count} members. Budget: {room.budget:.2f}$, Expenses: {room.expenses:.2f}$\n"
+            output += f"{room.family_name} with {room.members_count} members." \
+                      f" Budget: {room.budget:.2f}$, Expenses: {room.expenses:.2f}$\n"
             child_count = 1
             for child in room.children:
                 output += f"--- Child {child_count} monthly cost: {child.get_monthly_expense():.2f}$\n"
                 child_count += 1
             if hasattr(room, "appliances"):
-                output += f"--- Appliances monthly cost: {sum([app.get_monthly_expense() for app in room.appliances]):.2f}$\n"
+                output += f"--- Appliances monthly cost:" \
+                          f" {sum([app.get_monthly_expense() for app in room.appliances]):.2f}$\n"
         return output.strip()

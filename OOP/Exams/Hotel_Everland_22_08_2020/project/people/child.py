@@ -4,5 +4,3 @@ class Child:
 
     def get_monthly_expense(self):
         return self.cost * 30
-
-
