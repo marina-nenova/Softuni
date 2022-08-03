@@ -25,9 +25,8 @@ class Table(ABC):
         self.__capacity = value
 
     def reserve(self, number_of_people: int):
-        if self.capacity >= number_of_people:
-            self.is_reserved = True
-            self.number_of_people = number_of_people
+        self.is_reserved = True
+        self.number_of_people = number_of_people
 
     def order_food(self, baked_food: BakedFood):
         self.food_orders.append(baked_food)

@@ -50,10 +50,7 @@ class Bakery:
     def reserve_table(self, number_of_people: int):
         for table in self.tables_repository:
             if not table.is_reserved and table.capacity >= number_of_people:
-
-                table.is_reserved = True
-                table.number_of_people = number_of_people
-
+                table.reserve(number_of_people)
                 return f"Table {table.table_number} has been reserved for {number_of_people} people"
 
         return f"No available table for {number_of_people} people"

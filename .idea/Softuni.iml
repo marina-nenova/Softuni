@@ -2,7 +2,7 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/OOP/Exams/Hotel_Everland_22_08_2020" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OOP/Exams/Bakery_15_08_2021/exam_skeleton" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (OOP)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
