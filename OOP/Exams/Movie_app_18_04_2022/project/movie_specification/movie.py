@@ -4,6 +4,9 @@ from project.core.validator.validator import Validator
 
 
 class Movie(ABC):
+    MIN_AGE = 0
+
+    @abstractmethod
     def __init__(self, title: str, year: int, owner: object, age_restriction: int):
         self.title = title
         self.year = year
@@ -38,6 +41,22 @@ class Movie(ABC):
         Validator.raise_if_object_not_correct_type(value, "User", "The owner must be an object of type User!")
         self.__owner = value
 
-    @abstractmethod
+    @property
+    def age_restriction(self):
+        return self.__age_restriction
+
+    @age_restriction.setter
+    def age_restriction(self, value):
+        Validator.raise_if_value_is_less_than_min_value(
+            value,
+            self.MIN_AGE,
+            f"{self.__class__.__name__} movies must be restricted for audience under {self.MIN_AGE} years!"
+        )
+        self.__age_restriction = value
+
     def details(self):
-        pass
+        return f"{self.__class__.__name__} - Title:{self.title}," \
+               f" Year:{self.year}," \
+               f" Age restriction:{self.age_restriction}," \
+               f" Likes:{self.likes}," \
+               f" Owned by:{self.owner.username}"
