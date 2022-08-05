@@ -74,13 +74,8 @@ class Controller:
             except ValueError:
                 player.stamina = 0
 
-            food = Validator.raise_if_supply_type_is_not_available(self.supplies, "Food")
-            drink = Validator.raise_if_supply_type_is_not_available(self.supplies, "Drink")
-
-            try:
-                player.stamina += food.energy + drink.energy
-            except ValueError:
-                player.stamina = 100
+            self.sustain(player.name, "Food")
+            self.sustain(player.name, "Drink")
 
     def __str__(self):
         output = ""
