@@ -29,3 +29,6 @@ class PaintFactory(Factory):
     @property
     def products(self):
         return self.ingredients
+
+paint_factory = PaintFactory("Test", 2)
+paint_factory.remove_ingredient("A", 2)
