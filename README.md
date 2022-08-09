@@ -50,6 +50,7 @@ Here you can find problem solutions from the following lectures:
 8. [**Iterators and generators**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Iterators_and_generators)
 9. [**Decorators**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Decorators)
 10. [**Unit testing**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Unit_testing)
+11. [**Workshop**](https://github.com/marina-nenova/Softuni/tree/main/OOP/Workshop/Custom_list)
 ***
 **Exams Practice**
 
