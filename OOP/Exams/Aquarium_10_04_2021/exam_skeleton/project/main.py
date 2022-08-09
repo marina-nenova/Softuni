@@ -15,3 +15,27 @@ print(controller.feed_fish("Test2"))
 print(controller.calculate_value("Test"))
 print(controller.calculate_value("Test2"))
 print(controller.report())
+
+# Output
+#
+# Successfully added FreshwaterAquarium.
+# Successfully added SaltwaterAquarium.
+# Successfully added Plant.
+# Successfully added Ornament.
+# Successfully added Ornament to Test.
+# Successfully added Plant to Test2.
+# Successfully added FreshwaterFish to Test.
+# Successfully added FreshwaterFish to Test.
+# Successfully added SaltwaterFish to Test2.
+# Successfully added SaltwaterFish to Test2.
+# Fish fed: 2
+# The value of Aquarium Test is 25.00.
+# The value of Aquarium Test2 is 40.00.
+# Test:
+# Fish: Nemo Marvin
+# Decorations: 1
+# Comfort: 1
+# Test2:
+# Fish: Dori Gill
+# Decorations: 1
+# Comfort: 5
