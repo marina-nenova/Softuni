@@ -28,11 +28,11 @@ print(everland.status())
 
 # Output
 #
-# Monthly consumption: 1450.00$.
+# Monthly consumption: 1420.00$.
 # Johnsons paid 242.00$ and have 113.00$ left.
 # Peterson paid 894.00$ and have 226.00$ left.
 # Peters paid 10.00$ and have 290.00$ left.
-# Adams paid 85.00$ and have 415.00$ left.
+# Adams paid 55.00$ and have 445.00$ left.
 # Scott paid 219.00$ and have 451.00$ left.
 # Total population: 10
 # Johnsons with 2 members. Budget: 113.00$, Expenses: 222.00$
@@ -42,8 +42,8 @@ print(everland.status())
 # --- Child 2 monthly cost: 150.00$
 # --- Appliances monthly cost: 444.00$
 # Peters with 1 members. Budget: 290.00$, Expenses: 0.00$
-# Adams with 1 members. Budget: 415.00$, Expenses: 75.00$
-# --- Appliances monthly cost: 75.00$
+# Adams with 1 members. Budget: 445.00$, Expenses: 45.00$
+# --- Appliances monthly cost: 45.00$
 # Scott with 2 members. Budget: 451.00$, Expenses: 204.00$
 # --- Appliances monthly cost: 204.00$
 
