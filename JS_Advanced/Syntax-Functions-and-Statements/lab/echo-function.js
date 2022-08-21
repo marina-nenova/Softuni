@@ -1,3 +1,6 @@
-let firstName = 'Pesho'
+function solve(input) {
+    console.log(input.length);
+    console.log(input)
+}
 
-console.log(firstName)
+let text = ['Hello, JavaScript!']
