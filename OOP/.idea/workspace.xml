@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e41a0adf-f3e2-4d54-9c1b-f54b277a1787" name="Changes" comment="Added logic for 03_list.pys" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Aekzesk5bvVeazZvonrae2qOYD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\Polymorphism_and_abstraction\exercise\04_wild_farm" />
+      <recent name="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\Polymorphism_and_abstraction\lab" />
+      <recent name="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\First_steps_in_OOP\exercise\pokemon_battle" />
+      <recent name="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\First_steps_in_OOP\exercise" />
+      <recent name="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\First_steps_in_OOP\exercise\08_pokemon_battle\projrct" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="01_test_worker" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unit_testing/lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Unit_testing/lab/01_test_worker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="02_mammal" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Encapsulation/lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Encapsulation/lab/02_mammal.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="02_test_cat" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unit_testing/lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Unit_testing/lab/02_test_cat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="03_football_team_generator" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Encapsulation/exercise/football_team_generator" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Encapsulation/exercise/football_team_generator/03_football_team_generator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="03_list" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unit_testing/lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Unit_testing/lab/03_list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="04_car_manager" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unit_testing/lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Unit_testing/lab/04_car_manager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="04_restaurant" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Encapsulation/exercise/rastaurant" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Encapsulation/exercise/rastaurant/04_restaurant.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="04_wild_farm" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Polymorphism_and_abstraction/exercise/04_wild_farm" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Polymorphism_and_abstraction/exercise/04_wild_farm/04_wild_farm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="07_store_results" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Decorators/exercise" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Decorators/exercise/07_store_results.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for 01_test_worker.WorkerTests" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unit_testing/lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;01_test_worker.WorkerTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_worker" type="tests" factoryName="Autodetect">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unit_testing/lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_worker.WorkerTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_worker_WorkerTests" type="tests" factoryName="Autodetect">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\user\PycharmProjects\Softuni\Softuni\OOP\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unit_testing/lab" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_worker_WorkerTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.04_restaurant" />
+      <item itemvalue="Python.04_wild_farm" />
+      <item itemvalue="Python.07_store_results" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.01_test_worker" />
+      <item itemvalue="Python.02_mammal" />
+      <item itemvalue="Python.02_test_cat" />
+      <item itemvalue="Python.03_football_team_generator" />
+      <item itemvalue="Python.03_list" />
+      <item itemvalue="Python.04_car_manager" />
+      <item itemvalue="Python tests.Python tests for 01_test_worker.WorkerTests" />
+      <item itemvalue="Python tests.test_worker" />
+      <item itemvalue="Python tests.test_worker_WorkerTests" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e41a0adf-f3e2-4d54-9c1b-f54b277a1787" name="Changes" comment="" />
+      <created>1655377701425</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655377701425</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Added logic for 02_animals">
+      <created>1656951893170</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1656951893170</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Added logic for 04_entertainment_system">
+      <created>1657018303953</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1657018303953</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Added two new classes Flyable and Walkable">
+      <created>1657018447338</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1657018447338</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Added tlogic for 05_print_books">
+      <created>1657023137487</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1657023137487</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Added logic for workers.py">
+      <created>1657025132887</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1657025132887</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Added logic for workers_updated.py">
+      <created>1657026626526</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1657026626526</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Added logic for prisoner.py">
+      <created>1657027386077</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1657027386077</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Added logic for shapes.py">
+      <created>1657028351327</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1657028351327</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Added logic for emails.py">
+      <created>1657029398055</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1657029398055</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Added logic for emails.py">
+      <created>1657029568965</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1657029568965</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Added empty files fo Iterators and Generators lab exercises">
+      <created>1657041768948</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1657041768948</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Added empty files fo Iterators and Generators exercise problems">
+      <created>1657041974469</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1657041974469</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Added empty files for exam Movie app">
+      <created>1657094636475</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1657094636475</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Added logic for 01_custom_range.py">
+      <created>1657098080897</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1657098080897</updated>
+    </task>
+    <task id="LOCAL-00095" summary="Added logic for 02_reverse_iter.py">
+      <created>1657098298060</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1657098298060</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Added logic for 03_vowels.py">
+      <created>1657098643370</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1657098643370</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Added logic for 04_squares.py">
+      <created>1657098740433</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1657098740433</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Added logic for 05_generator_range.py">
+      <created>1657098839239</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1657098839239</updated>
+    </task>
+    <task id="LOCAL-00099" summary="Added logic for 06_reverse_string.py">
+      <created>1657098928699</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1657098928699</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Added logic for 01_take_skip.py">
+      <created>1657101509323</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1657101509323</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Added logic for 02_dictionary_iterator.py">
+      <created>1657103495770</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1657103495770</updated>
+    </task>
+    <task id="LOCAL-00102" summary="Added logic for 03_countdown_iterator.py">
+      <created>1657103724551</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1657103724551</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Added logic for 04_sequence_repeat.py">
+      <created>1657105786535</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1657105786535</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Added logic for 05_take_halves.py">
+      <created>1657106830817</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1657106830817</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Added logic for 06_fibonacci_generator.py">
+      <created>1657107237705</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1657107237705</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Added logic for 07_reader.py">
+      <created>1657107568954</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1657107568954</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Added logic for 08_prime_numbers.py">
+      <created>1657108726980</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1657108726980</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Refactor code for spoopify problem">
+      <created>1657109153208</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1657109153208</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Added logic for 09_possible_permutations.py">
+      <created>1657110420759</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1657110420760</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Added empty files for Decorators-lab">
+      <created>1657182552399</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1657182552399</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Added empty files for Decorators-exercise">
+      <created>1657182658444</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1657182658444</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Added logic for 01_number_increment.py">
+      <created>1657195844387</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1657195844387</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Added logic for 02_vowel_filter.py">
+      <created>1657196013434</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1657196013434</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Added logic for 03_even_numbers.py">
+      <created>1657196164980</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1657196164980</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Added logic for 04_multiply.py">
+      <created>1657196347479</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1657196347479</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Added logic for 01_logged.py">
+      <created>1657199554528</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1657199554528</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Added logic for 02_even_parameters.py">
+      <created>1657201133612</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1657201133612</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Added logic for 03_bold_italic_underline.py">
+      <created>1657201424659</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1657201424659</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Added logic for 04_type_check.py">
+      <created>1657201786401</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1657201786401</updated>
+    </task>
+    <task id="LOCAL-00120" summary="Refactored 04_type_check.py">
+      <created>1657207903736</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1657207903736</updated>
+    </task>
+    <task id="LOCAL-00121" summary="Refactored 05_cache.py">
+      <created>1657215609911</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1657215609911</updated>
+    </task>
+    <task id="LOCAL-00122" summary="Refactored 06_HTML_tags.py">
+      <created>1657263672282</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1657263672282</updated>
+    </task>
+    <task id="LOCAL-00123" summary="Added logic for 07_store_results.py">
+      <created>1657285350562</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1657285350562</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Added logic for 08_execution_time.py">
+      <created>1657285957537</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1657285957537</updated>
+    </task>
+    <task id="LOCAL-00125" summary="Added empty files for Unit testing - lab">
+      <created>1657294405171</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1657294405171</updated>
+    </task>
+    <task id="LOCAL-00126" summary="Added empty files for Unit testing - exercises">
+      <created>1657301133479</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1657301133479</updated>
+    </task>
+    <task id="LOCAL-00127" summary="Added logic for 01_test_worker.py">
+      <created>1657379539548</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1657379539548</updated>
+    </task>
+    <task id="LOCAL-00128" summary="Added logic for 02_test_cat.py">
+      <created>1657386124464</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1657386124464</updated>
+    </task>
+    <task id="LOCAL-00129" summary="Added logic for 03_list.pys">
+      <created>1657388873035</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1657388873036</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added logic for 06_fibonacci_generator.py" />
+    <MESSAGE value="Added logic for 07_reader.py" />
+    <MESSAGE value="Added logic for 08_prime_numbers.py" />
+    <MESSAGE value="Refactor code for spoopify problem" />
+    <MESSAGE value="Added logic for 09_possible_permutations.py" />
+    <MESSAGE value="Added empty files for Decorators-lab" />
+    <MESSAGE value="Added empty files for Decorators-exercise" />
+    <MESSAGE value="Added logic for 01_number_increment.py" />
+    <MESSAGE value="Added logic for 02_vowel_filter.py" />
+    <MESSAGE value="Added logic for 03_even_numbers.py" />
+    <MESSAGE value="Added logic for 04_multiply.py" />
+    <MESSAGE value="Added logic for 01_logged.py" />
+    <MESSAGE value="Added logic for 02_even_parameters.py" />
+    <MESSAGE value="Added logic for 03_bold_italic_underline.py" />
+    <MESSAGE value="Added logic for 04_type_check.py" />
+    <MESSAGE value="Refactored 04_type_check.py" />
+    <MESSAGE value="Refactored 05_cache.py" />
+    <MESSAGE value="Refactored 06_HTML_tags.py" />
+    <MESSAGE value="Added logic for 07_store_results.py" />
+    <MESSAGE value="Added logic for 08_execution_time.py" />
+    <MESSAGE value="Added empty files for Unit testing - lab" />
+    <MESSAGE value="Added empty files for Unit testing - exercises" />
+    <MESSAGE value="Added logic for 01_test_worker.py" />
+    <MESSAGE value="Added logic for 02_test_cat.py" />
+    <MESSAGE value="Added logic for 03_list.pys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logic for 03_list.pys" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/First_steps_in_OOP/exercise/pokemon_battle/project/trainer.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Classes_and_objects/lab/04_glass.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Classes_and_objects/exercise/02_time.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Inheritance/lab/food/01_food.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Inheritance/exercise/need_for_speed/04_need_for_speed.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Encapsulation/exercise/wild_cat_zoo/01_wild_cat_zoo.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Static_and_class_methods/exercise/movie_world/02_movie_world.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Unit_testing/lab/03_list.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
