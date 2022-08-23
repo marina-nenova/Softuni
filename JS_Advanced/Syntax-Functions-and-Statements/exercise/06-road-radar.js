@@ -21,11 +21,11 @@ function solve(speed, area) {
         let status;
         let difference = currentSpeed - speedLimit;
         if (difference >= 40) {
-            status = 'reckless driving'
+            status = 'reckless driving';
         } else if (difference >=20) {
-            status = 'excessive speeding'
+            status = 'excessive speeding';
         } else {
-            status = 'speeding'
+            status = 'speeding';
         }
         console.log(`The speed is ${difference} km/h faster than the allowed speed of ${speedLimit} - ${status}`);
     }
