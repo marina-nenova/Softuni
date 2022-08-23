@@ -1,6 +1,6 @@
 function solve(input) {
     console.log(input.length);
-    console.log(input)
+    console.log(input);
 }
 
-let text = ['Hello, JavaScript!']
+solve('Hello, JavaScript!')

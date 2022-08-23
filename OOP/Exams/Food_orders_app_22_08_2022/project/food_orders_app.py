@@ -59,10 +59,7 @@ class FoodOrdersApp:
             meal_to_cart = copy(meal)
             meal_to_cart.quantity = wanted_quantity
             meals_to_add.append(meal_to_cart)
-
-        for meal_order in meals_to_add:
-            meal = self.__find_meal_by_name(meal_order.name)
-            meal.quantity -= meal_order.quantity
+            meal.quantity -= wanted_quantity
 
         client.shopping_cart.extend(meals_to_add)
         client.bill = sum([meal.price * meal.quantity for meal in client.shopping_cart])
