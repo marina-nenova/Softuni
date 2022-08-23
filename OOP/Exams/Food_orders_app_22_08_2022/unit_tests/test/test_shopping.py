@@ -1,5 +1,6 @@
-from unit_tests.shopping_cart import ShoppingCart
+from project.shopping_cart import ShoppingCart
 from unittest import TestCase, main
+
 
 class ShoppingTests(TestCase):
     def test_shopping_cart_initialized_correctly_with_valid_data(self):
@@ -88,11 +89,6 @@ class ShoppingTests(TestCase):
         sc.products = {"Apple": 25, "Orange": 35}
         result = sc.buy_products()
         self.assertEqual("Products were successfully bought! Total cost: 60.00lv.", result)
-
-
-
-
-
 
 
 if __name__ == "__main__":
