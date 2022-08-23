@@ -10,6 +10,5 @@ function solve(a, b) {
         }
     }console.log(firstNumber);
 
-
 }
 solve(15, 5)
