@@ -9,6 +9,6 @@ function solve(a, b) {
             secondNumber -= firstNumber;
         }
     }console.log(firstNumber);
-
 }
+
 solve(15, 5)

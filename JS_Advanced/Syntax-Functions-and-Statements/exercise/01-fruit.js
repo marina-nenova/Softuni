@@ -7,4 +7,5 @@ function solve(fruit, weight, price) {
 
     console.log(`I need $${moneyNeeded.toFixed(2)} to buy ${weightInKilos.toFixed(2)} kilograms ${fruitType}.`);
 }
+
 solve('orange', 2500, 1.80)

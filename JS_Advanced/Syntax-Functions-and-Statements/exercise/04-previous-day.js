@@ -4,4 +4,5 @@ function previousDay(year, month, day) {
     date.setDate(date.getDate()-1);
     console.log(`${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`);
 }
+
 previousDay(2016, 1, 1);

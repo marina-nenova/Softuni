@@ -14,4 +14,5 @@ function solve(number) {
     console.log(sameNumbers);
     console.log(sumNums);
 }
+
 solve(1234)
