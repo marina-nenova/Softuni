@@ -1,5 +1,6 @@
 function solve(array) {
-    let newArray = []
+    let newArray = [];
+    
     for (const el of array) {
         if (el >= 0) {
             newArray.push(el);
