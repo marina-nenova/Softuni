@@ -27,6 +27,6 @@ function lastKNumbers(n, k) {
     return result;
 
 }
-console.log(lastKNumbers(8, 2));
+console.log(lastKNumbers(6, 3));
 
 
