@@ -2,7 +2,7 @@ function lastKNumbers(n, k) {
 
     let result = [1];
 
-    for(let i = 1; i < n; i++){
+    for (let i = 1; i < n; i++) {
 
         result[i] = sumLastK(result, k);
 
@@ -14,7 +14,7 @@ function lastKNumbers(n, k) {
 
         let sum = 0;
 
-        for(let i = 1; i <= k; i++){
+        for (let i = 1; i <= k; i++) {
 
             sum += array[array.length - i];
 
@@ -27,6 +27,6 @@ function lastKNumbers(n, k) {
     return result;
 
 }
-console.log(lastKNumbers(8,2));
+console.log(lastKNumbers(8, 2));
 
 
