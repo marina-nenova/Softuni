@@ -8,10 +8,10 @@ function solve(array) {
             biggestNum = num;
         }
     }
-    console.log(newArr);
+    return newArr
 }
 
-solve([1,
+result = solve([1,
     3,
     8,
     4,
@@ -21,3 +21,4 @@ solve([1,
     2,
     24]
 )
+console.log(result.join('\n'));
