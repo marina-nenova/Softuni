@@ -9,11 +9,11 @@ function solve(array) {
             numArr.push(result);
         } else if (command === 'remove') {
             numArr.pop();
-        }  
-        
+        }
+
     }
     if (numArr.length === 0) {
-        console.log('empty');
+        console.log('Empty');
     } else {
         numArr.forEach(element => {
             console.log(element);
@@ -21,9 +21,9 @@ function solve(array) {
     }
 }
 
-solve(['remove', 
-'remove', 
-'remove']
-
-
+solve(['add',
+    'add',
+    'remove',
+    'add',
+    'add']
 )
