@@ -1,22 +1,25 @@
 function solve(array) {
-    let products = new Map();
-    for (let sentance of array) {
-        let [town, product, price] = sentance.split(" | ");
-        if (!products.has(product)) {
-            products.set(product, new Map());
-        }
-        products.get(product).set(town, Number(price));
-    }
-    for (let [key, value] of products) {
-        let lowest = ([...value].reduce(function (a, b) {
-            if (a[1] < b[1]) {
-                return a;
-            } else if (a[1] > b[1]) {
-                return b;
+    let products = [];
+
+    for (const line of array) {
+        let [town, product, price] = line.split(' | ');
+        price = Number(price);
+
+        if (products.filter(x => x.product === product).length > 0) {
+
+            let obj = products.find(x => x.product === product);
+
+            if (obj.price > price) {
+                obj.price = price;
+                obj.town = town;
             }
-            return a;
-        }));
-        console.log(`${key} -> ${lowest[1]} (${lowest[0]})`);
+        } else {
+            let obj = {product, town, price};
+            products.push(obj);
+        }
+    }
+    for (const prod of products) {
+        console.log(`${prod.product} -> ${prod.price} (${prod.town})`);
     }
 }
 
