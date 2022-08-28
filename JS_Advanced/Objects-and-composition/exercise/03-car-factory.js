@@ -1,15 +1,18 @@
 function solve(car) {
     let newCar = {};
+    newCar.model = car.model;
+    
     let engines = {
         'Small engine': { power: 90, volume: 1800 },
         'Normal engine': { power: 120, volume: 2400 },
         'Monster engine': { power: 200, volume: 3500 },
     };
     let carriages = {
-        'Hatchback': { type: 'hatchback', color: car.color },
-        'Coupe': { type: 'coupe', color: car.color }
+        'hatchback': { type: 'hatchback', color: car.color },
+        'coupe': { type: 'coupe', color: car.color }
     };
-    newCar.model = car.model
+    
+    
     if (car.power <= 90) {
         newCar.engine = engines['Small engine'];
     } else if (car.power <= 120) {
@@ -18,12 +21,8 @@ function solve(car) {
         newCar.engine = engines['Monster engine'];
     }
 
-    if (car.carriage === 'hatchback') {
-        newCar.carriage = carriages['Hatchback'];
-    } else {
-        newCar.carriage = carriages['Coupe'];
-    }
-
+    newCar.carriage = carriages[car.carriage];
+    
     let newWheelSize = car.wheelsize
 
     if (car.wheelsize % 2 === 0) {

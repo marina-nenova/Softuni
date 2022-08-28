@@ -1,10 +1,10 @@
 function solve(array) {
     let calorieObject = {}
 
-    for (let index = 0; index < array.length; index+=2) {
-        let foodName = array[index]
-        let foodCalories = array[index + 1]
-        calorieObject[foodName] = Number(foodCalories)
+    for (let index = 0; index < array.length; index += 2) {
+        let foodName = array[index];
+        let foodCalories = array[index + 1];
+        calorieObject[foodName] = Number(foodCalories);
     }
     console.log(calorieObject);
 }
