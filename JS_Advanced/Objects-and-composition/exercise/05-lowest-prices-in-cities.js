@@ -14,7 +14,7 @@ function solve(array) {
                 obj.town = town;
             }
         } else {
-            let obj = {product, town, price};
+            let obj = { product, town, price };
             products.push(obj);
         }
     }
