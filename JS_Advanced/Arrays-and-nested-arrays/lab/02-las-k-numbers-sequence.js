@@ -4,28 +4,11 @@ function lastKNumbers(n, k) {
 
     for (let i = 1; i < n; i++) {
 
-        result[i] = sumLastK(result, k);
-
-    }
-
-    function sumLastK(array = result, k) {
-
-        k = array.length > k ? k : array.length;
-
-        let sum = 0;
-
-        for (let i = 1; i <= k; i++) {
-
-            sum += array[array.length - i];
-
-        }
-
-        return sum;
-
+        let start = i - k < 0 ? 0 : i - k;
+        result.push(result.slice(start).reduce((a, b) => a + b));
     }
 
     return result;
-
 }
 console.log(lastKNumbers(6, 3));
 
