@@ -1,16 +1,16 @@
 function createSortedList() {
     let list = [];
     let listObj = {
-        add (element) {
+        add(element) {
             list.push(element);
             list.sort((a, b) => a - b);
         },
-        remove (index) {
+        remove(index) {
             if (index >= 0 && index < list.length) {
                 list.splice(index, 1);
             }
         },
-        get (index) {
+        get(index) {
             if (index >= 0 && index < list.length) {
                 return list[index];
             }
