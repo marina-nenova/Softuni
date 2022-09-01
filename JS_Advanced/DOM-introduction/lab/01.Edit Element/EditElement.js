@@ -3,5 +3,5 @@ function editElement(element, match, replacement) {
     while (textElement.includes(match)) {
         textElement = textElement.replace(match, replacement);
     }
-    element.textContent= textElement;
+    element.textContent = textElement;
 }
