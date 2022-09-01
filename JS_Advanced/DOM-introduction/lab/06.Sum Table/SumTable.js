@@ -6,6 +6,6 @@ function sumTable() {
         return a + currentElement;
     }, 0)
 
-    let sumElement = document.getElementById('sum')
-    sumElement.textContent = sum
+    let sumElement = document.getElementById('sum');
+    sumElement.textContent = sum;
 }
