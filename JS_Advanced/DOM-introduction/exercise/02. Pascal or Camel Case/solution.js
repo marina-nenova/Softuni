@@ -1,9 +1,34 @@
 function solve() {
+
   function camelize(str) {
-    return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
-      if (+match === 0) return ""; // or if (/\s+/.test(match)) for white spaces
-      return index === 0 ? match.toLowerCase() : match.toUpperCase();
-    });
+
+    let stringResult = '';
+
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === ' ') {
+        stringResult += (str[i + 1].toUpperCase());
+        i++;
+      } else {
+        stringResult += str[i];
+      }
+    }
+    return stringResult;
+  }
+
+  function pascalize(str) {
+
+    let stringResult = '';
+    stringResult += str[0].toUpperCase();
+
+    for (let i = 1; i < str.length; i++) {
+      if (str[i] === ' ') {
+        stringResult += (str[i + 1].toUpperCase());
+        i++;
+      } else {
+        stringResult += str[i];
+      }
+    }
+    return stringResult;
   }
 
   let input = document.getElementById('text').value;
@@ -16,8 +41,7 @@ function solve() {
   if (currentCase === "Camel Case") {
     result = camelize(textLower);
   } else if (currentCase === "Pascal Case") {
-    const toPascalCase = str => (str.match(/[a-zA-Z0-9]+/g) || []).map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join('');
-    result = toPascalCase(textLower);
+    result = pascalize(textLower);
   } else {
     result = 'Error!'
   }
