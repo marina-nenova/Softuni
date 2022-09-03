@@ -15,7 +15,6 @@ function generateReport() {
 
     let result = [];
 
-
     for (let row of rowsArr) {
         let info = {};
         for (let index of cbIndices) {
@@ -24,7 +23,6 @@ function generateReport() {
             info[name] = rowIinfo;
         }
         result.push(info)
-
     }
     report = JSON.stringify(result);
 
