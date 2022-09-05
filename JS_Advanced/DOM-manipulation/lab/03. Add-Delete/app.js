@@ -17,5 +17,4 @@ function addItem() {
 
     itemsElement.appendChild(newLiElement);
     inputTextElement.value = '';
-
 }
