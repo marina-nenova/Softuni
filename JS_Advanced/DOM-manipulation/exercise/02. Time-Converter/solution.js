@@ -27,7 +27,6 @@ function attachEventsListeners() {
         }
     }
 
-
     function onConvert(event) {
         let input = event.currentTarget.parentNode.querySelector('input[type="text"]');
         let time = convert(Number(input.value), input.id);
