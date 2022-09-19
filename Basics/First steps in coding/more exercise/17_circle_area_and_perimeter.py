@@ -1,6 +1,4 @@
-import math
 from math import pi
-
 
 r = float(input())
 
