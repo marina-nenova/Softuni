@@ -28,6 +28,3 @@ elif amount > 25:
     total -= total * 0.1
 
 print(f"{total:.2f} lv.")
-
-
-

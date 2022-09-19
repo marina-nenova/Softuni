@@ -5,7 +5,6 @@ taxi = 0
 bus = 0.09 * kilometers
 train = 0.06 * kilometers
 
-
 if time_of_day == "day":
     taxi = 0.7 + (0.79 * kilometers)
 elif time_of_day == "night":
@@ -13,8 +12,7 @@ elif time_of_day == "night":
 
 if kilometers < 20:
     print(f"{taxi:.2f}")
-elif kilometers >= 20 and kilometers < 100:
+elif 20 <= kilometers < 100:
     print(f"{bus:.2f}")
 else:
     print(f"{train:.2f}")
-

@@ -17,3 +17,4 @@ if total_food_needed <= food_in_kg:
 else:
     food_needed = math.ceil(total_food_needed - food_in_kg)
     print(f"{food_needed} more kilos of food are needed.")
+
