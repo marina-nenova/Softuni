@@ -7,3 +7,11 @@ def home(request):
 
 def department(request):
     return HttpResponse('This is department')
+
+def department_details(request, id):
+    return HttpResponse(f'This is department {id}')
+
+def list_departments(request):
+    return HttpResponse('This is department list')
+
+
