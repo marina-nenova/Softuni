@@ -20,6 +20,6 @@ from employees_app.employees.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', home, name='index'),
     path('departments/', include('employees_app.employees.urls'))
 ]
