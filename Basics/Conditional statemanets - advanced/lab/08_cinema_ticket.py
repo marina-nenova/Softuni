@@ -8,3 +8,7 @@ elif day_of_week in "Saturday Sunday":
     price = 16
 
 print(price)
+
+
+if day_of_week == 'Monday' or day_of_week == 'Tuesday' or day_of_week == 'Friday':
+    price = 12
