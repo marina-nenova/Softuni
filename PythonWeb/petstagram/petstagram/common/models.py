@@ -10,6 +10,9 @@ class Comment(models.Model):
     date_time_of_publication = models.DateField(auto_now_add=True)
     to_photo = models.ForeignKey(Photo, on_delete=models.CASCADE)
 
+    class Meta:
+        ordering = ['-date_time_of_publication']
+
 
 class Like(models.Model):
     to_photo = models.ForeignKey(Photo, on_delete=models.CASCADE)
