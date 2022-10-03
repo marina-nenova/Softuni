@@ -4,6 +4,7 @@ season = input()
 destination = ""
 type_of_vacation = ""
 expenses = 0
+
 if budget <= 100:
     destination = "Bulgaria"
     if season == "summer":

@@ -2,6 +2,7 @@ type_of_flowers = input()
 amount = int(input())
 budget = int(input())
 total = 0
+
 if type_of_flowers == "Roses":
     total = amount * 5
     if amount > 80:

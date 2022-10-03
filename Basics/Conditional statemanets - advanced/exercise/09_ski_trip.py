@@ -4,6 +4,7 @@ rating = input()
 total = 0
 price = 0
 discount = 0
+
 if type_of_room == "room for one person":
     price = 18
 
@@ -25,7 +26,8 @@ elif type_of_room == "president apartment":
     elif days_stay > 15:
         discount = 0.2
 
-total = (days_stay - 1) * price - ((days_stay - 1) * price) * discount
+total = (days_stay - 1) * price
+total -= total * discount
 
 if rating == "positive":
     total += total * 0.25
