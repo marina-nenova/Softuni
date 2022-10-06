@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from myMusicApp.album.views import home
+from myMusicApp.user_profile.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),

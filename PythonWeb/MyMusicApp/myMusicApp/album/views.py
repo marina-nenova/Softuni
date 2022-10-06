@@ -1,16 +1,25 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-
-def home(request):
-    return render(request, 'home-no-profile.html')
+from myMusicApp.album.forms import AlbumForm
+from myMusicApp.album.models import Album
 
 
 def add_album(request):
-    return render(request, 'album/add-album.html')
+    form = AlbumForm()
+    if request.method == 'POST':
+        form = AlbumForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    context = {'form': form}
+    return render(request, 'album/add-album.html', context)
 
 
 def album_details(request, pk):
-    return render(request, 'album/album-details.html')
+    album = Album.objects.get(id=pk)
+
+    context = {'album': album}
+    return render(request, 'album/album-details.html', context)
 
 
 def edit_album(request, pk):

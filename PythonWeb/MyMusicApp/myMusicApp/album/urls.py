@@ -4,7 +4,7 @@ from myMusicApp.album.views import add_album, album_details, edit_album, delete_
 
 urlpatterns = (
     path('add/', add_album, name='add-album'),
-    path('details/<int:id>/', album_details, name='album-details'),
-    path('edit/<int:id>/', edit_album, name='edit-album'),
-    path('delete/<int:id>/', delete_album, name='delete-album'),
+    path('details/<str:pk>/', album_details, name='album-details'),
+    path('edit/<str:pk>/', edit_album, name='edit-album'),
+    path('delete/<str:pk>/', delete_album, name='delete-album'),
 )
