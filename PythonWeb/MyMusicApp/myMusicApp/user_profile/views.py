@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from myMusicApp.album.models import Album
 from myMusicApp.user_profile.forms import ProfileForm
@@ -14,7 +14,7 @@ def home(request):
             if form.is_valid():
                 form.save()
                 return render(request, 'home-with-profile.html')
-        context = {'form': form}
+        context = {'user': user, 'form': form}
         return render(request, 'home-no-profile.html', context)
     else:
         albums = Album.objects.all()
@@ -23,10 +23,17 @@ def home(request):
 
 
 def profile_details(request):
-
-    return render(request, 'user_profile/profile-details.html')
+    user = Profile.objects.first()
+    all_albums = len(Album.objects.all())
+    context = {'user': user, 'all_albums': all_albums}
+    return render(request, 'user_profile/profile-details.html', context)
 
 
 def profile_delete(request):
-
+    albums = Album.objects.all()
+    profile = Profile.objects.first()
+    if request.method == "POST":
+        profile.delete()
+        albums.delete()
+        return redirect('home')
     return render(request, 'user_profile/profile-delete.html')

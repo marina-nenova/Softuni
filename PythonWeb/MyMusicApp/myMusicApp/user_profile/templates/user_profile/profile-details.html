@@ -11,15 +11,17 @@
 
         <div class="profileText">
             <!-- Profile Info -->
-            <h1>Username: aleksandra_12345</h1>
-            <h1>Email: aleksandra@email.com</h1>
-            <h1>Age: 27</h1>
-            <h1>Albums: 3</h1>
+            <h1>Username: {{ user.username }}</h1>
+            <h1>Email: {{ user.email }}</h1>
+            {% if user.age %}
+            <h1>Age: {{ user.age }}</h1>
+            {% endif %}
+            <h1>Albums: {{ all_albums }}</h1>
         </div>
 
         <div class="actionBtn">
             <!-- Button for Deleting the Profile -->
-            <a href="#" class="remove">Delete</a>
+            <a href="{% url 'profile-delete' %}" class="remove">Delete</a>
         </div>
 
     </div>
