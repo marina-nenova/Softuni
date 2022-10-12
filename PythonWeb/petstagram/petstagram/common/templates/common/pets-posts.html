@@ -36,7 +36,7 @@
         <!-- End User Details and Image Location -->
 
         <!-- Start Pet Photo -->
-        <div class="imgBx" id="place the id of the photo here">
+        <div class="imgBx" id="photo-{{ photo.id }}">
             <img src="{% static 'images/axolotl.jpeg' %}" alt="post" class="cover">
         </div>
         <!-- End Pet Photo -->
@@ -74,7 +74,7 @@
                                                  role="img"
                                                  viewBox="0 0 48 48"
                                                  width="24">
-                                        {% endif %}
+
                                         <!-- Coordinate path -->
                                         <path d="M34.6 6.1c5.7 0 10.4 5.2 10.4
                                                     11.5 0 6.8-5.9 11-11.5 16S25 41.3 24
@@ -90,6 +90,7 @@
                                                     48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
                                         </path>
                                         </svg>
+                                        {% endif %}
 								</a>
 								</span>
                     <!-- End Like Button -->
@@ -114,7 +115,7 @@
             <!-- End Like and Share Buttons -->
 
             <!-- Number of Likes per Photo -->
-            <p class="likes">{{ photo.like_set.count }}</p>
+            <p class="likes">{{ photo.like_set.count }} Likes</p>
 
 
             <!-- Start Tagged Pets -->

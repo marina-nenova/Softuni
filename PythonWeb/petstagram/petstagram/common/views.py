@@ -16,6 +16,11 @@ def like_functionality(request, photo_id):
     photo = Photo.objects.get(id=photo_id)
     liked_object = Like.objects.filter(to_photo_id=photo_id).first()
 
+    # photo_like = Like(id=photo_id)
+    # photo_like.save()
+
+    # Like.objects.create(id=photo_id)
+
     if liked_object:
         liked_object.delete()
     else:
