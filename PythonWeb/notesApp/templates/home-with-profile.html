@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <h1>My Notes</h1>
+
+
+    <h2>There are no notes.</h2>
+    <!--notes container-->
+    {% for note in notes %}
+    <div class="note-container">
+        <h2>{{ note.title }} <img src="{{ note.image }}" alt="{{ note.title }}-image"/></h2>
+
+        <div class="right">
+            <a class="button details" href="{% url 'note-details' note.pk %}">Details</a>
+            <a class="button edit" href="{% url 'edit_note' note.pk %}">Edit</a>
+            <a class="button delete" href="{% url 'delete-note' note.pk %}">Delete</a>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!--end notes container-->
+
+{% endblock content %}

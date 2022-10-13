@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+        <!--end navigation bar-->
+
+        <div class="body">
+            <!--headings-->
+            <h1>Add Note</h1>
+            <!--headings-->
+
+            <!--note data form-->
+            <div class="form">
+                <form method="POST" action="{% url 'add-note' %}">
+                    {% csrf_token %}
+                    {{ form }}
+
+                    <input type="submit" value="Publish" />
+                </form>
+            </div>
+            <!--end note data form-->
+        </div>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+        <div class="body">
+            <!--headings-->
+            <h1>Delete Note</h1>
+            <!--headings-->
+
+            <!--note delete data form-->
+            <div class="form">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Delete" />
+                </form>
+            </div>
+            <!--end note delete data form-->
+        </div>
+
+{% endblock content %}
