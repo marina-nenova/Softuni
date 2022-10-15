@@ -8,12 +8,19 @@ def show_index(request):
     profile = Profile.objects.first()
     books = Book.objects.all()
 
+    rows = []
+    per_row = 3
+
+    for i in range(0, len(books), per_row):
+        current_row = books[i: i + per_row]
+        rows.append(current_row)
+
     if not profile:
         return redirect('create-profile')
 
     context = {
         'profile': profile,
-        'books': books,
+        'rows': rows,
     }
     return render(request, 'home-with-profile.html', context)
 

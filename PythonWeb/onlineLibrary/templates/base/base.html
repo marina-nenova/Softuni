@@ -17,6 +17,7 @@
             <nav class="navbar">
                 <section class="navbar-dashboard">
                     <a href="{% url 'show-index' %}">Dashboard</a>
+
                     {% if profile %}
                     <div id="user">
                         <span>Welcome, {{ profile.first_name }}</span>
@@ -24,7 +25,9 @@
                         <a class="button" href="{% url 'show-profile' %}">Profile</a>
                     </div>
                     {% endif %}
+
                 </section>
+
             </nav>
         </header>
 
