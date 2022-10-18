@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <!-- create game section -->
+    <section id="create-page" class="auth">
+        <!-- create game form -->
+        <form id="create" method="POST" action="{% url 'create game' %}">
+            <div class="container">
+                <!-- create game paragraph -->
+                <h1>Create Game</h1>
+
+                {{ form }}
+                {% csrf_token %}
+
+{#                <label for="title">Title:</label>#}
+{#                <input type="text" id="title" name="title">#}
+{#                <label for="category">Category:</label>#}
+{#                <select name="cars" id="category">#}
+{#                    <option value="volvo">---------</option>#}
+{#                    <option value="saab">Action</option>#}
+{#                    <option value="mercedes">Adventure</option>#}
+{#                    <option value="audi">Puzzle</option>#}
+{#                    <option value="saab">Strategy</option>#}
+{#                    <option value="mercedes">Sports</option>#}
+{#                    <option value="audi">Board/Card Game</option>#}
+{#                    <option value="audi">Other</option>#}
+{#                </select>#}
+{#                <label for="rating">Rating:</label>#}
+{#                <input type="number" id="rating" name="rating" min="1" maxlength="5">#}
+{#                <label for="maxLevel">Max Level:</label>#}
+{#                <input type="number" id="maxLevel" name="maxLevel" min="1" max="65535">#}
+{#                <label for="imageUrl">Image URL:</label>#}
+{#                <input type="text" id="imageUrl" name="imageUrl">#}
+{#                <label for="summary">Summary:</label>#}
+{#                <textarea name="summary" id="summary"></textarea>#}
+
+                <!-- create game button -->
+                <input class="btn submit" type="submit" value="Create Game">
+            </div>
+        </form>
+    </section>
+
+{% endblock content %}

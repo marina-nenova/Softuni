@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <!-- edit game form -->
+    <section id="delete-page" class="auth">
+        <form id="delete" method="POST">
+            <div class="container">
+
+                <h1>Delete Game</h1>
+                {{ form }}
+                {% csrf_token %}
+{#                <label for="title">Title:</label>#}
+{#                <input type="text" id="title" name="title" value="Uno" disabled>#}
+{#                <label for="category">Category:</label>#}
+{#                <select name="cars" id="category" required disabled>#}
+{#                    <option value="Board/Card Game">Board/Card Game</option>#}
+{#                </select>#}
+{#                <label for="rating">Rating:</label>#}
+{#                <input type="number" id="rating" name="rating" min="1" maxlength="5" value="4.3" disabled>#}
+{#                <label for="maxLevel">Max Level:</label>#}
+{#                <input type="number" id="maxLevel" name="maxLevel" min="1" max="65535" value="10" disabled>#}
+{#                <label for="imageUrl">Image URL:</label>#}
+{#                <input type="text" id="imageUrl" name="imageUrl"#}
+{#                       value="https://cdn1.epicgames.com/ca93b6d41a4e41af864942d8f0a2a826/offer/GameName_Store_Landscape_2560x1440-2560x1440-43068caa839fc392e6bb54e0daf2e8a8.jpg"#}
+{#                       disabled>#}
+{#                <label for="summary">Summary:</label>#}
+{#                <textarea name="summary" id="summary" disabled>Uno is an American shedding-type card game that is played with a specially printed deck. The game's general principles put it into the crazy eights family of card games, and it is similar to the traditional European game mau-mau.</textarea>#}
+
+                <input class="btn submit" type="submit" value="Delete Game">
+            </div>
+        </form>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <!-- edit profile section -->
+    <section id="register-page" class="content auth">
+        <!-- edit profile form -->
+        <form id="register" method="POST">
+            <div class="container">
+                <!-- Edit Profile paragraph -->
+                <h1>Edit Profile</h1>
+                {{ form }}
+                {% csrf_token %}
+
+{#                <label for="email">Email:</label>#}
+{#                <input type="url" id="email" name="email" value="aleksandra@email.com" required>#}
+{#                <label for="age">Age:</label>#}
+{#                <input type="number" name="confirm-password" id="age" value="28" required>#}
+{#                <label for="register-password">Password:</label>#}
+{#                <input type="text" name="password" id="register-password" value="123QwEr" required>#}
+{#                <label for="first-name">First Name:</label>#}
+{#                <input type="text" name="first-name" id="first-name" maxlength="30">#}
+{#                <label for="last-name">Last Name:</label>#}
+{#                <input type="text" name="last-name" id="last-name" maxlength="30">#}
+{#                <label for="profile-picture">Profile Picture:</label>#}
+{#                <input type="url" name="profile-picture" id="profile-picture" maxlength="30">#}
+
+                <!-- edit profile button -->
+                <input class="btn submit" type="submit" value="Edit Profile">
+            </div>
+        </form>
+    </section>
+
+{% endblock content %}
