@@ -1,12 +1,19 @@
-from django.forms import ModelForm
+from django import forms
 
 from myMusicApp.album.models import Album
 
 
-class AlbumForm(ModelForm):
+class AlbumForm(forms.ModelForm):
     class Meta:
         model = Album
         fields = '__all__'
+        widgets = {
+            'album_name': forms.TextInput(attrs={'placeholder': 'Album Name'}),
+            'artist': forms.TextInput(attrs={'placeholder': 'Artist'}),
+            'description': forms.Textarea(attrs={'placeholder': 'Description'}),
+            'image_url': forms.URLInput(attrs={'placeholder': 'Image URL'}),
+            'price': forms.TextInput(attrs={'placeholder': 'Price'}),
+        }
 
 
 class DeleteAlbumForm(AlbumForm):
