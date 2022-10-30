@@ -12,5 +12,4 @@ urlpatterns = (
     path('profile/', show_profile, name='show-profile'),
     path('profile/register', create_profile, name='create-profile'),
     path('profile/delete/', delete_profile, name='delete-profile'),
-
 )
